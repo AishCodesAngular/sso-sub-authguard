@@ -39,6 +39,7 @@ export class AppComponent implements OnInit, OnDestroy {
           localStorage.removeItem('isRootAppOpen');
         }
         this.isRootAppOpen = localStorage.getItem('isRootAppOpen');
+        this.sharedService.isAppOpen = this.isRootAppOpen;
         this.conterHandler(event.data.process)
         this.openForms(event.data.process.formName);
 

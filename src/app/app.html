@@ -1,4 +1,4 @@
-<ng-container *ngIf="isRootAppOpen == 'true'">
+<ng-container *ngIf="sharedService?.isAppOpen == 'true'">
 <h1>{{message() | json}}</h1>
 
   <button (click)="sharedService.sendMessageToApp1('message')">Send Message To App1</button>
@@ -10,7 +10,5 @@
     <button (click)="decrementApp1('minus')">-</button>
   </div>
 </ng-container>
-
-<div>Hello from app1</div>
 
 <router-outlet></router-outlet>

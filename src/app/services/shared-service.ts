@@ -4,7 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedService {
-
+  public isAppOpen = localStorage.getItem('isRootAppOpen');
+  
+  constructor() {
+  }
 
   sendMessageToApp1(value: any) {
     window.opener?.postMessage(
